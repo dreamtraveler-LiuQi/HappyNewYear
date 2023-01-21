@@ -12,19 +12,19 @@
       document.getElementsByTagName("html")[0].style.fontSize = size + "px";
 
       //添加事件
-      var dl = document.getElementById("year");
-      var player = document.getElementById("player");
-      dl.addEventListener(
-        "touchstart",
-        function () {
-          if (player.paused) {
-            player.play();
-          } else {
-            player.pause();
-          }
-        },
-        false
-      );
+      // var dl = document.getElementById("year");
+      // var player = document.getElementById("player");
+      // dl.addEventListener(
+      //   "touchstart",
+      //   function () {
+      //     if (player.paused) {
+      //       player.play();
+      //     } else {
+      //       player.pause();
+      //     }
+      //   },
+      //   false
+      // );
 
       // 		document.addEventListener('plusready', function(){
       // 			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
@@ -219,7 +219,7 @@
       );
       document.addEventListener("touchstart", play, false);
     }
-    audioAutoPlay("audios");
+    // audioAutoPlay("audios");
 
     // footer点击事件
     var button_1 = document.getElementById("open1"),

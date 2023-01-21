@@ -1,0 +1,134 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: LiuQi
+ * @Date: 2023-01-21 16:28:06
+ * @LastEditors: Andy
+ * @LastEditTime: 2023-01-21 17:11:39
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H5小集合</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      .wrap {
+        width: 100%;
+        height: 100%;
+        background-image: url(./image/879.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+      }
+      .header {
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-flow: wrap;
+      }
+      #card1,
+      #card2,
+      #card3,
+      #card4,
+      #card5,
+      #card6,
+      #card7,
+      #card8,
+      #card9,
+      #card10,
+      #card11 {
+        padding: 0.2rem 0.2rem;
+        font-size: 4.5625vw;
+        color: #d60b3b;
+        /* opacity: 0; */
+        border: #d60b3b 1px solid;
+        /* padding: 2px; */
+        border-radius: 0.8vw;
+        text-align: center;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <div id="card1">养了个羊</div>
+        <div id="card2">飞机躲避障碍</div>
+        <div id="card3">经典扫雷</div>
+        <div id="card4">小众音乐播放器</div>
+        <div id="card5">在线音乐播放器</div>
+        <div id="card6">mmPlayer音乐播放器</div>
+        <div id="card7">66s在线电影网</div>
+        <div id="card8">电影港</div>
+        <div id="card9">奈非影视</div>
+        <div id="card10">1905电影网</div>
+        <div id="card11">西瓜影视</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var button_1 = document.getElementById("card1"),
+      button_2 = document.getElementById("card2"),
+      button_3 = document.getElementById("card3"),
+      button_4 = document.getElementById("card4"),
+      button_5 = document.getElementById("card5"),
+      button_6 = document.getElementById("card6"),
+      button_7 = document.getElementById("card7"),
+      button_8 = document.getElementById("card8"),
+      button_9 = document.getElementById("card9"),
+      button_10 = document.getElementById("card10"),
+      button_11 = document.getElementById("card11");
+    button_1.onclick = function () {
+      window.location.href = "http://qekang.com/yang/";
+    };
+    button_2.onclick = function () {
+      window.location.href =
+        "https://wanghao221.github.io/game/Aircraft-Avoid-Obstacles.html";
+    };
+    button_3.onclick = function () {
+      window.location.href = "https://elgara.gitee.io/demo/Mine-sweeper/";
+    };
+    button_4.onclick = function () {
+      window.location.href = "https://music.docqd.com/";
+    };
+    button_5.onclick = function () {
+      window.location.href = "https://tool.liumingye.cn/music/#/";
+    };
+    button_6.onclick = function () {
+      window.location.href = "https://netease-music.fe-mm.com/#/music/playlist";
+    };
+    button_7.onclick = function () {
+      window.location.href = "https://www.66s.cc/";
+    };
+    button_8.onclick = function () {
+      window.location.href = "http://www.dygangs.com/";
+    };
+    button_9.onclick = function () {
+      window.location.href = "https://www.nfyingshi.com/";
+    };
+    button_10.onclick = function () {
+      window.location.href = "https://www.1905.com/vod/";
+    };
+    button_11.onclick = function () {
+      window.location.href = "https://www.ixigua.com/channel/dianying";
+    };
+  </script>
+</html>

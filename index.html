@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Happy New Year</title>
+    <script type="text/javascript">
+      size = window.screen.width / 30;
+      document.getElementsByTagName("html")[0].style.fontSize = size + "px";
+
+      //添加事件
+      var dl = document.getElementById("year");
+      var player = document.getElementById("player");
+      dl.addEventListener(
+        "touchstart",
+        function () {
+          if (player.paused) {
+            player.play();
+          } else {
+            player.pause();
+          }
+        },
+        false
+      );
+
+      // 		document.addEventListener('plusready', function(){
+      // 			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+      //
+      // 		});
+    </script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      #mainpage {
+        /* width: 30rem;
+        height: 53.33333333333333rem; */
+        width: 100%;
+        height: 100%;
+        background: url(20.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+      }
+
+      .p_huanbian {
+        position: absolute;
+        /* width: 28rem;
+        height: 28rem; */
+        width: 28rem;
+        height: 28rem;
+        /* top: 8.8rem; */
+        top: 15%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: url(huabian.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: ha 3s linear infinite;
+        -webkit-animation: ha 3s linear infinite;
+      }
+      @-webkit-keyframes ha {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes ha {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .p_year {
+        position: absolute;
+        width: 30rem;
+        height: 15rem;
+        /* top: 35rem; */
+        top: 58%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: url(year-1.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: ja 3s linear infinite;
+        -webkit-animation: ja 3s linear infinite;
+      }
+
+      @-webkit-keyframes ja {
+        0% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.1);
+        }
+        50% {
+          transform: scale(1);
+        }
+        75% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes ja {
+        0% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.1);
+        }
+        50% {
+          transform: scale(1);
+        }
+        75% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .p3_button {
+        width: 82%;
+        margin: 0 auto;
+        z-index: 19;
+        position: absolute;
+        bottom: 0;
+        left: 8.9%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20%;
+        justify-content: space-between;
+      }
+
+      #open1,
+      #open2,
+      #open3,
+      #open4 {
+        width: 5rem;
+        height: 2rem;
+        font-size: 4.5625vw;
+        color: #d60b3b;
+        /* opacity: 0; */
+        border: #d60b3b 1px solid;
+        padding: 2px;
+        border-radius: 0.8vw;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <audio
+      id="player"
+      src="happnew.mp3"
+      autoplay="autoplay"
+      loop="loop"
+    ></audio>
+    <div id="mainpage">
+      <audio autoplay="autopaly" loop="loop" id="audios">
+        <source src="happnew.mp3" type="audio/mp3" />
+      </audio>
+      <div class="p_huanbian"></div>
+      <div id="year" class="p_year"></div>
+      <div class="p3_button">
+        <div id="open1">过新年</div>
+        <div id="open2">照片墙</div>
+        <div id="open3">看春晚</div>
+        <div id="open4">熬通宵</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // 自动播放音乐
+    function audioAutoPlay(id) {
+      var audio = document.getElementById(id),
+        play = function () {
+          audio.play();
+          document.removeEventListener("touchstart", play, false);
+        };
+      audio.play();
+      document.addEventListener(
+        "WeixinJSBridgeReady",
+        function () {
+          play();
+        },
+        false
+      );
+      document.addEventListener(
+        "YixinJSBridgeReady",
+        function () {
+          play();
+        },
+        false
+      );
+      document.addEventListener("touchstart", play, false);
+    }
+    audioAutoPlay("audios");
+
+    // footer点击事件
+    var button_1 = document.getElementById("open1"),
+      button_2 = document.getElementById("open2"),
+      button_3 = document.getElementById("open3"),
+      button_4 = document.getElementById("open4");
+    button_1.onclick = function () {
+      window.location.href = "./card/index.html";
+    };
+    button_2.onclick = function () {
+      window.location.href = "./photo/index.html";
+    };
+    button_3.onclick = function () {
+      window.location.href = "https://tv.cctv.com/live/";
+    };
+    button_4.onclick = function () {
+      window.location.href = "./game/index.html";
+    };
+  </script>
+</html>
